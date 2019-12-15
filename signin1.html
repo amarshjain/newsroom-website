@@ -1,0 +1,50 @@
+<html>
+   <head>
+   <title>NEWSROOM</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <link rel="stylesheet" href="sin.css">
+   </head>
+   <body>
+       <div class="trbox">
+           <h1>HERMES</h1>
+           <div id="formbox">
+           <form id="signin-form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Student Used ID</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+               <br>
+  <button type="submit" class="btn btn-primary">SIGN-IN</button>
+</form>
+               <hr>
+               <button type="button" class="btn btn-link">Not registered yet?SIGNUP</button>
+
+           </div>
+       </div>
+      <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCTnL8kl0BuXS4pK9o1McqM5XTw_9NzzsU",
+    authDomain: "hermes-faf4b.firebaseapp.com",
+    databaseURL: "https://hermes-faf4b.firebaseio.com",
+    projectId: "hermes-faf4b",
+    storageBucket: "hermes-faf4b.appspot.com",
+    messagingSenderId: "470250309972",
+    appId: "1:470250309972:web:43b871ed7e2bbbb36ee0c1",
+    measurementId: "G-ZC4WEFTD3C"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+       <script type="text/javascript" src="auth2.js"></script>
+    </body>
+</html>
