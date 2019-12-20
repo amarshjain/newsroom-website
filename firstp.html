@@ -2,8 +2,14 @@
 <html>
    <head>
    <title>WELCOME TO HERMES</title>
+       <link rel = "icon" type = "image/png" href = "hermes_icon.png">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
        <link rel="stylesheet" href="sin.css">
+       <script
+       src="https://code.jquery.com/jquery-3.4.1.js"
+       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+       crossorigin="anonymous">
+      </script>
       </head>
    <body>
        
@@ -24,15 +30,18 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Subscriptions</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Other
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">SignIn</a>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">SignUp</a>
-          <a class="dropdown-item" href="#">Settings</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="loggedout" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">SignIn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="loggedout" data-toggle="modal" data-target=".bd-example-modal-lg">SignUp</a>
+      </li>
+    </ul>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav" id="logout">
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="loggedIn">LogOut</a>
       </li>
     </ul>
   </div>
@@ -41,7 +50,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+        <h5 class="modal-title" id="exampleModalLabel"> <img src="hermes_icon.png" width="30" height="30" class="d-inline-block align-top" alt=""> LOGIN to Hermes</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -68,9 +77,15 @@
 </div>
 
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="su" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"> <img src="hermes_icon.png" width="30" height="30" class="d-inline-block align-top" alt=""> Sign Up to Hermes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <form class="needs-validation" novalidate id="signup-Form">
         <div class="form-row">
           <div class="col-md-6 mb-3">
@@ -174,6 +189,13 @@
   <p>If you want to change your info, update your subscripton, etc. click the below PROFILE button.</p>
   <a class="btn btn-primary btn-lg" href="#" role="button">PROFILE</a>
 </div>
+
+
+
+
+
+
+
     
 
 
@@ -226,7 +248,8 @@
            const auth = firebase.auth();
            const db = firebase.firestore();
        </script>
-              <script src="auth.js"></script>
+              <script type="text/javascript" src="auth.js"></script>
+              <script type="text/javascript" src="cml.js"></script>
     
     
     
