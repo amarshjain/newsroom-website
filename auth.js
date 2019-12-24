@@ -6,7 +6,7 @@ auth.onAuthStateChanged(user =>{
     else{
         console.log("USER LOGGED OUT");
         setupUI();
-    }
+        }
 })
 
 
@@ -24,8 +24,9 @@ signupForm.addEventListener('submit', (e) => {
 
         console.log(cred);
         console.log("Hi "+name+" your account has been successfully created. Please sign-in.");
+        $('#su').modal('hide');
         
-        alert("Hi "+name+" your account has been successfully created. Please sign-in.");
+        $('#exampleModalCenter').modal('show');
 
         
         signupForm.reset();
@@ -38,8 +39,9 @@ loginForm.addEventListener('submit', (e) => {
     const email = loginForm['exampleInputEmail1'].value;
     const password = loginForm['exampleInputPassword1'].value;
     firebase.auth().signInWithEmailAndPassword(email, password).then(cred => {
+        $('#exampleModal').modal('hide');
         console.log(cred);
-        alert("Hi User, Welcome to Hermes.");
+        loginForm.reset();
     })
 })
 
