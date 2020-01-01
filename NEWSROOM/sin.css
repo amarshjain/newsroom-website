@@ -1,0 +1,41 @@
+body{
+    background-image: url(https://i.ytimg.com/vi/yGEOXfRfLAo/maxresdefault.jpg);
+    align-items: center;
+}
+.trbox{
+    width: 100%;
+    height: 100vw;
+    background-color: white;
+    opacity: 0.7;
+    display: inline-block;
+    font-family: cursive;
+}
+#topp{
+    position: absolute;
+    top: 30%;
+    left: 8vw;
+}
+#signup-Form{
+padding: 5vw;
+}
+.btn btn-link{
+    text-decoration: none;
+}
+#loggedIn{
+    float: right;
+}
+#logout li a{
+    color: white;
+}
+#logout{
+    float: right;
+}
+#loggedout{
+    display: none;
+}
+#loggedIn{
+    display: none;
+}
+#assignup-Form{
+    padding: 5vw;
+    }
