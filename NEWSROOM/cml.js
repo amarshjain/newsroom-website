@@ -36,3 +36,8 @@ const setupUI = (user) => {
         loggedinlinks.forEach(item => item.style.display = 'none')
     }
 }
+
+
+$("#scard").click(function(){
+            document.querySelector("#scard").classList.toggle("subscard");
+        })
