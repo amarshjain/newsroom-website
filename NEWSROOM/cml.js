@@ -38,6 +38,3 @@ const setupUI = (user) => {
 }
 
 
-$("#scard").click(function(){
-            document.querySelector("#scard").classList.toggle("subscard");
-        })

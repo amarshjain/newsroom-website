@@ -42,7 +42,28 @@ signupForm.addEventListener('submit', (e) => {
             fname: fname,
             lname: lname,
             admno: admno,
-            branch: branch            
+            branch: branch,
+            subs: {
+                clab: false,
+                rism: false,
+                litc: false,
+                adc: false,
+                artf: false,
+                ecel: false,
+                lci: false,
+                foto: false,
+                litm: false,
+                wtc: false,
+                mant: false,
+                arka: false,
+                ffi: false,
+                kart: false,
+                udan: false,
+                acm: false,
+                fipi: false,
+                sese: false,
+                siam: false,
+            }
             
             })
 
@@ -50,7 +71,7 @@ signupForm.addEventListener('submit', (e) => {
         console.log("Hi "+name+" your account has been successfully created. Please sign-in.");
         $('#su').modal('hide');
         
-        $('#exampleModalCenter').modal('show');
+        $('#subs').modal('show');
 
         
         signupForm.reset();
@@ -102,7 +123,39 @@ var messagesRef;
             branch: branch            
             
             }).then(() => {
-                location.href = "index.html";
-            })
+                $('#profilem').modal('hide');            })
+
+        })
+
+
+
+        $("#savesubs").click(function(){
+            var currentUser = firebase.auth().currentUser;
+            firebase.database().ref("-messages/"+currentUser.uid).update({
+                subs: {
+                    clab: document.getElementById("customControlInline").checked,
+                    rism: document.getElementById("customControlInline2").checked,
+                    litc: document.getElementById("customControlInline3").checked,
+                    adc: document.getElementById("customControlInline4").checked,
+                    artf: document.getElementById("customControlInline5").checked,
+                    ecel: document.getElementById("customControlInline6").checked,
+                    lci: document.getElementById("customControlInline7").checked,
+                    foto: document.getElementById("customControlInline8").checked,
+                    litm: document.getElementById("customControlInline9").checked,
+                    wtc: document.getElementById("customControlInline10").checked,
+                    mant: document.getElementById("customControlInline11").checked,
+                    arka: document.getElementById("customControlInline12").checked,
+                    ffi: document.getElementById("customControlInline13").checked,
+                    kart: document.getElementById("customControlInline14").checked,
+                    udan: document.getElementById("customControlInline15").checked,
+                    acm: document.getElementById("customControlInline16").checked,
+                    fipi: document.getElementById("customControlInline17").checked,
+                    sese: document.getElementById("customControlInline18").checked,
+                    siam: document.getElementById("customControlInline19").checked,
+                }            
+                
+                }).then(() => {
+                    $('#subs').modal('hide');
+                })
 
         })
