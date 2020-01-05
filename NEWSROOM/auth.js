@@ -69,7 +69,6 @@ signupForm.addEventListener('submit', (e) => {
 
         console.log(cred);
         console.log("Hi "+name+" your account has been successfully created. Please sign-in.");
-        $('#su').modal('hide');
         
         $('#subs').modal('show');
 
@@ -115,6 +114,7 @@ var messagesRef;
         admno = $("#asvalidationCustom03").val();
         branch = $("#asvalidationCustom04").val();
 
+
         var currentUser = firebase.auth().currentUser;
         firebase.database().ref("-messages/"+currentUser.uid).update({
             fname: fname,
@@ -156,6 +156,8 @@ var messagesRef;
                 
                 }).then(() => {
                     $('#subs').modal('hide');
+                    $('#su').modal('hide');
+                    location.href = "index.html";
                 })
 
         })

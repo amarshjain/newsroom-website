@@ -10,6 +10,7 @@ body{
     background-color: white;
     display: inline-block;
     align-content: center;
+    text-align: center;
 }
 #topp{
     position: absolute;
@@ -40,5 +41,62 @@ padding: 5vw;
 #assignup-Form{
     padding: 5vw;
     }
+#clabpost{
+    display: none;;
+}
+#robopost{
+    display: none;;
+}
+#litcpost{
+    display: none;;
+}
+#adcpost{
+    display: none;;
+}
+#artfpost{
+    display: none;;
+}
+#ecelpost{
+    display: none;;
+}
+#lcipost{
+    display: none;;
+}
+#fotopost{
+    display: none;;
+}
+#litmpost{
+    display: none;;
+}
+#wtcpost{
+    display: none;;
+}
+#mantpost{
+    display: none;;
+}
+#arkapost{
+    display: none;;
+}
+#ffipost{
+    display: none;;
+}
+#kartpost{
+    display: none;;
+}
+#udanpost{
+    display: none;;
+}
+#acmpost{
+    display: none;;
+}
+#fipipost{
+    display: none;;
+}
+#sesepost{
+    display: none;;
+}
+#siampost{
+    display: none;;
+}
 
     

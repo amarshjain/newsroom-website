@@ -14,6 +14,45 @@ const setupUI = (user) => {
         $("#seedhaSignIn2").click(function(){
             $("#subs").modal()
         })
+
+        $("#profilesubs").click(function(){
+            $("#subs").modal()
+        })
+        $("#seedhaSignIn3").click(function(){
+            $("#profilem").modal()
+
+        })
+        var currentUser = firebase.auth().currentUser;
+                    firebase.database().ref('-messages/' + currentUser.uid + '/subs').once('value').then(function(snapshot) {
+                    if(snapshot.val().clab){
+                    clabpost = document.getElementById("clabpost");
+                    clabpost.style.display = 'block';
+                    }
+                    if(snapshot.val().rism){
+                        clabpost = document.getElementById("robopost");
+                        clabpost.style.display = 'block';
+                    }
+                    if(snapshot.val().litc){
+                        clabpost = document.getElementById("litcpost");
+                        clabpost.style.display = 'block';
+                    }
+                    if(snapshot.val().adc){
+                        clabpost = document.getElementById("adcpost");
+                        clabpost.style.display = 'block';
+                    }
+                    if(snapshot.val().artf){
+                        clabpost = document.getElementById("artfpost");
+                        clabpost.style.display = 'block';
+                    }
+            firebase.database().ref('-messages/' + currentUser.uid).once('value').then(function(snapshot) {
+                $("#asvalidationCustom01").val(snapshot.val().fname);
+                $("#asvalidationCustom02").val(snapshot.val().lname);
+                $("#asvalidationCustom03").val(snapshot.val().admno);
+                $("#asvalidationCustom04").val(snapshot.val().branch);
+        
+            });
+    
+        });
         loggedoutlinks.forEach(item => item.style.display = 'none')
         loggedinlinks.forEach(item => item.style.display = 'block')
         
@@ -36,5 +75,3 @@ const setupUI = (user) => {
         loggedinlinks.forEach(item => item.style.display = 'none')
     }
 }
-
-
