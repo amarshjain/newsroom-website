@@ -98,5 +98,11 @@ padding: 5vw;
 #siampost{
     display: none;;
 }
-
-    
+.jumbotron{
+    text-align: center;
+}   
+@media screen and (max-width: 1000px) {
+    .trbox {
+      width: 100%;
+    }
+  }

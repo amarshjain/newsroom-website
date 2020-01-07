@@ -76,6 +76,7 @@ signupForm.addEventListener('submit', (e) => {
         signupForm.reset();
 
 
+
        
     })
 })
