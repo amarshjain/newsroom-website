@@ -107,7 +107,27 @@ const setupUI = (user) => {
                 $("#asvalidationCustom04").val(snapshot.val().branch);
         
             });
-    
+            firebase.database().ref('-messages/' + currentUser.uid + '/subs').once('value').then(function(snapshot) {
+                $( "#customControlInline" ).prop( "checked", snapshot.val().clab );
+                $( "#customControlInline2" ).prop( "checked", snapshot.val().rism );
+                $( "#customControlInline3" ).prop( "checked", snapshot.val().litc );
+                $( "#customControlInline4" ).prop( "checked", snapshot.val().adc );
+                $( "#customControlInline5" ).prop( "checked", snapshot.val().artf );
+                $( "#customControlInline6" ).prop( "checked", snapshot.val().ecel );
+                $( "#customControlInline7" ).prop( "checked", snapshot.val().lci );
+                $( "#customControlInline8" ).prop( "checked", snapshot.val().foto );
+                $( "#customControlInline9" ).prop( "checked", snapshot.val().litm );
+                $( "#customControlInline10" ).prop( "checked", snapshot.val().wtc );
+                $( "#customControlInline11" ).prop( "checked", snapshot.val().mant );
+                $( "#customControlInline12" ).prop( "checked", snapshot.val().arka );
+                $( "#customControlInline13" ).prop( "checked", snapshot.val().ffi );
+                $( "#customControlInline14" ).prop( "checked", snapshot.val().kart );
+                $( "#customControlInline15" ).prop( "checked", snapshot.val().udan );
+                $( "#customControlInline16" ).prop( "checked", snapshot.val().acm );
+                $( "#customControlInline17" ).prop( "checked", snapshot.val().fipi );
+                $( "#customControlInline18" ).prop( "checked", snapshot.val().sese );
+                $( "#customControlInline19" ).prop( "checked", snapshot.val().siam );
+            });
         });
         loggedoutlinks.forEach(item => item.style.display = 'none')
         loggedinlinks.forEach(item => item.style.display = 'block')
