@@ -105,4 +105,7 @@ padding: 5vw;
     .trbox {
       width: 100%;
     }
+    .col-sm{
+        padding-left: 155px;
+    }
   }

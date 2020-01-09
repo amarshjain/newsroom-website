@@ -100,6 +100,10 @@ const setupUI = (user) => {
                         clabpost = document.getElementById("siampost");
                         clabpost.style.display = 'block';
                     }
+                    if(snapshot.val().mism){
+                        clabpost = document.getElementById("mismpost");
+                        clabpost.style.display = 'block';
+                    }
             firebase.database().ref('-messages/' + currentUser.uid).once('value').then(function(snapshot) {
                 $("#asvalidationCustom01").val(snapshot.val().fname);
                 $("#asvalidationCustom02").val(snapshot.val().lname);
@@ -127,8 +131,12 @@ const setupUI = (user) => {
                 $( "#customControlInline17" ).prop( "checked", snapshot.val().fipi );
                 $( "#customControlInline18" ).prop( "checked", snapshot.val().sese );
                 $( "#customControlInline19" ).prop( "checked", snapshot.val().siam );
+                $( "#customControlInline20" ).prop( "checked", snapshot.val().mism );
             });
         });
+
+
+
         loggedoutlinks.forEach(item => item.style.display = 'none')
         loggedinlinks.forEach(item => item.style.display = 'block')
         
@@ -151,3 +159,5 @@ const setupUI = (user) => {
         loggedinlinks.forEach(item => item.style.display = 'none')
     }
 }
+
+

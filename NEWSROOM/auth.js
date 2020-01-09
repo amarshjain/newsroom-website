@@ -63,6 +63,7 @@ signupForm.addEventListener('submit', (e) => {
                 fipi: false,
                 sese: false,
                 siam: false,
+                mism: false
             }
             
             })
@@ -153,6 +154,7 @@ var messagesRef;
                     fipi: document.getElementById("customControlInline17").checked,
                     sese: document.getElementById("customControlInline18").checked,
                     siam: document.getElementById("customControlInline19").checked,
+                    mism: document.getElementById("customControlInline20").checked,
                 }            
                 
                 }).then(() => {
