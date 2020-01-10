@@ -111,4 +111,7 @@ padding: 5vw;
     .col-sm{
         padding-left: 155px;
     }
+    iframe{
+        width: 300px;
+    }
   }
