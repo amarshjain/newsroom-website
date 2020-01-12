@@ -32,4 +32,4 @@ Future Works :-
 
 Link of Hosted website : http://hermesnews.000webhostapp.com/index.html#
 
-Tech=Stack :- HTML, CSS, Javascript, Bootstrap( for better designing ), Firebase( for authentication system and database), 000webhost( for hosting final website)
+Tech-Stack :- HTML, CSS, Javascript, Bootstrap( for better designing ), Firebase( for authentication system and database), 000webhost( for hosting final website)
